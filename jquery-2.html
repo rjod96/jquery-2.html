@@ -5,6 +5,10 @@
     <title>News quiz for April 9, 2018</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <script src="http://code.jquery.com/jquery-3.3.1.slim.js"></script>
+    <style>
+    .has-success{}
+    .has-error{}
+    </style>
   </head>
   <body>
     <div class="container">
@@ -36,16 +40,26 @@
     <script>
     $('#grade-it').on('click', function() {
     // Check name of dwarfs
-    var hours = $('#question-1').val();
+    var hours = $('#question-1 .form-control').val();
 
     if (hours == '24') {
-      alert('Correct!');
-    } else if (hours == '23') {
-      alert('That is incorrect.')
-    } else {
-      alert('Wrong. "' + hours + '" that is not correct');
+    $("#question-1").addClass("has-success");
     }
-  });
+    else {
+      $("#question-1").addClass("has-error")
+    }
+});
+    $("#grade-it").on('click',function (){
+
+    var days = $("#question-2 .form-control").val();
+
+    if (days == 'Seven') {
+      $("#question-2").addClass("has-success");
+    } else {
+      $("#question-2").addClass ("has-error")
+  }
+});
+
     </script>
   </body>
 </html>
