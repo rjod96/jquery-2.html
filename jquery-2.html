@@ -45,6 +45,9 @@
       </div>
     </div>
 
+    <button type="button">Show Me The Answers</button>
+
+
     <script>
     $('#grade-it').on('click', function() {
 
@@ -81,6 +84,12 @@ $("#grade-it").on('click',function() {
   } else {
     $("#question-3").addClass ("has-error")
   }
+});
+  $("button").on('click', function(){
+  $("#question-1 .form-control").val("24");
+  $("#question-2 .form-control").val("7");
+  $("#question-3 .form-control").val("3");
+
 });
 
     </script>
