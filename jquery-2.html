@@ -47,7 +47,14 @@
 
     <script>
     $('#grade-it').on('click', function() {
-    // Check name of dwarfs
+
+    $("#question-1").removeClass("has-success")
+    $("#question-2").removeClass("has-success")
+    $("#question-2").removeClass("has-success")
+    $("#question-1").removeClass("has-error")
+    $("#question-2").removeClass("has-error")
+    $("#question-3").removeClass("has-error")
+
     var hours = $('#question-1 .form-control').val();
 
     if (hours == '24') {
