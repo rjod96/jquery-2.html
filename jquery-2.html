@@ -4,26 +4,27 @@
     <meta charset="utf-8">
     <title>News quiz for April 9, 2018</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="http://code.jquery.com/jquery-3.3.1.slim.js"></script>
   </head>
   <body>
     <div class="container">
       <h1>News quiz for April 9, 2018</h1>
 
       <div id="question-1" class="form-group">
-        <label class="control-label"> What day is it today?</label>
+        <label class="control-label"> How many hours are in the day?</label>
         <input type="text" class="form-control" />
       </div>
 
       <div id="question-2" class="form-group">
         <label class="control-label">How many days are in the week?</label>
         <select class="form-control">
-          <option value="One">Answer 1</option>
-          <option value="Two">Answer 2</option>
-          <option value="Three">Answer 3</option>
-          <option value="Four">Answer 4</option>
-          <option value="Five">Answer 5</option>
-          <option value="Six">Answer 6</option>
-          <option value="Seven">Answer 7</option>
+          <option value="One">1</option>
+          <option value="Two">2</option>
+          <option value="Three">3</option>
+          <option value="Four">4</option>
+          <option value="Five">5</option>
+          <option value="Six">6</option>
+          <option value="Seven">7</option>
         </select>
       </div>
 
@@ -33,7 +34,18 @@
     </div>
 
     <script>
-      /* Your JavaScript code goes here */
+    $('#grade-it').on('click', function() {
+    // Check name of dwarfs
+    var hours = $('#question-1').val();
+
+    if (hours == '24') {
+      alert('Correct!');
+    } else if (hours == '23') {
+      alert('That is incorrect.')
+    } else {
+      alert('Wrong. "' + hours + '" that is not correct');
+    }
+  });
     </script>
   </body>
 </html>
